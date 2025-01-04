@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    color: #e5e5e5;
+    font-weight: 600;
+}
+
+.div-peliculas{
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    padding: 5em 10em 3em 10em;
+    gap: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.div-series{
+    width: 100%;
+    height: 80vh;
+    background-color: blue;
+    padding: 5em 10em 3em 10em;
+    gap: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.pelicula, .serie{
+    width: 13em;
+    height: 30vh;
+    background-color: black;
+}
+
+.div-creacion-principal{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-form-creacion{
+    height: 70vh;
+    width: 40%;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.form-creacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-creacion input[type="text"], .form-creacion input[type="number"]{
+    background-color: rgb(32, 32, 32);
+    border: rgb(166, 166, 166) solid 0.000000001em;
+    height: 5vh;
+    width: 100%;
+    
+}
+
+.form-creacion textarea{
+    background-color: rgb(32, 32, 32);
+    border: rgb(166, 166, 166) solid 0.000000001em;
+}
+
+.form-creacion button{
+    color: black;
+    padding: 0.3em 3em;
+    cursor: pointer;
+}
+
+.form-creacion label{
+    border: rgb(166, 166, 166) solid 0.000000001em;
+    padding: 0.3em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-creacion label:hover {
+    background-color: rgb(50, 50, 50); 
+    color: rgb(200, 200, 200); 
+    border-color: rgb(200, 200, 200); 
+}

@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    color: #e5e5e5;
+    font-weight: 600;
+}
+
+.div-nav{
+    background-color: rgb(32, 32, 32);
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-logo{
+    width: 4.5em;
+}
+
+.img-lupa{
+    width: 1.3em;
+}
+
+.div-menu{
+    display: flex;
+    align-items: center;
+    padding-left: 1.2em;
+    gap: 2em;
+}
+
+.div-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3em;
+}
+
+.div-menu ul li{
+    list-style: none;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.div-menu ul li a{
+    text-decoration: none;
+}
+
+.caja-buscar{
+    background-color: rgb(32, 32, 32);
+    border-style: none;
+    width: 10em;
+}
+
+.caja-buscar:focus{
+    outline: none;
+}
+
+.div-buscar{
+    border-style: solid;
+    border-color: white;
+    border-width: .00001em;
+    padding: .2em .6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    max-height: 2em;
+}
+
+.div-buscador-perfil{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding-right: 1.2em;
+}
+
+.img-avatar{
+    height: 3em;
+}
+
+.div-menu-desplegable{
+    position: absolute;
+    top: 5.4em;
+    right: 1em;
+    background-color: black;
+    min-width: 150px;
+    opacity: 90%;
+    z-index: 1;
+    border: .01em rgb(87, 87, 87) solid;
+    visibility: hidden;
+    transition:  visibility 0.5s ease;
+}
+
+.div-menu:hover .div-menu-desplegable {
+    opacity: 0.9; 
+    visibility: visible;
+}
+
+.img-usuario{
+    height: 1.4em;
+}
+
+.div-usuario{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: .7em 1.2em;
+    gap: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
+.div-cuenta, .div-avatar{
+    display: flex;
+    align-items: center;
+    gap: .6em;
+}
+
+.div-cerrar-sesion{
+    border-top: .01em rgb(87, 87, 87) solid;
+    padding: .5em 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 30vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-logo-footer{
+    width: 7em;
+}
+
+.img-rrss{
+    width: 3em;
+}
+
+.div-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-contacto, .textarea-contacto, .boton-contacto{
+    width: 27em;
+}
+
+.textarea-contacto{
+    height: 5em;
+}
+
+.boton-contacto{
+    color: black;
+}
+
+.añadir-pelicula{
+    margin: 7em;
+}
