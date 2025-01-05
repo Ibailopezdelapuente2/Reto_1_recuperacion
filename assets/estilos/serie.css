@@ -1,0 +1,48 @@
+.input-capitulos{
+    margin-bottom: 1em;
+}
+
+#temporadasContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.capitulosContainer div input, .capitulosContainer div textarea, .capitulosContainer div label, .capitulosContainer button, #temporadasContainer button{
+    margin-bottom: 1em;
+}
+
+.img-series-inicial{
+    width: 13em;
+    height: 20vh;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    margin-bottom: 0.4em;
+}
+
+.serie{
+    border-radius: 2%;
+}
+
+.div-series h1{
+    grid-area: h1;
+    font-weight: bolder;
+}
+
+.div-series{
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    padding: 5em 10em 3em 10em;
+    gap: 4em;
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 6;
+    margin-bottom: 8em;
+    margin-top: 4em;
+    grid-template-areas: 
+    "h1 h1 h1 h1 h1 h1"
+    ". . . . . ."
+    ". . . . . .";
+}

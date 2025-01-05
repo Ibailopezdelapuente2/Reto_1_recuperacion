@@ -10,18 +10,22 @@
 .div-peliculas{
     width: 100%;
     height: 80vh;
-    background-color: white;
+    background-color: black;
     padding: 5em 10em 3em 10em;
     gap: 4em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 6;
+    grid-template-areas: 
+    "h1 h1 h1 h1 h1 h1"
+    ". . . . . ."
+    ". . . . . .";
 }
 
 .div-series{
     width: 100%;
     height: 80vh;
-    background-color: blue;
+    background-color: black;
     padding: 5em 10em 3em 10em;
     gap: 4em;
     display: flex;
@@ -33,26 +37,29 @@
 .pelicula, .serie{
     width: 13em;
     height: 30vh;
-    background-color: black;
+    background-color: rgb(32, 32, 32);
+    transition: all 0.3s ease;
 }
 
 .div-creacion-principal{
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .div-form-creacion{
-    height: 70vh;
-    width: 40%;
+    min-height: 70vh;
+    min-width: 40%;
     background-color: rgb(32, 32, 32);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3em;
+    margin: 10vh 0;
+    padding: 4vh 0;
 }
 
 .form-creacion{
@@ -67,7 +74,7 @@
     background-color: rgb(32, 32, 32);
     border: rgb(166, 166, 166) solid 0.000000001em;
     height: 5vh;
-    width: 100%;
+    width: 28em;
     
 }
 
@@ -94,3 +101,28 @@
     color: rgb(200, 200, 200); 
     border-color: rgb(200, 200, 200); 
 }
+
+.img-peliculas-inicial{
+    width: 13em;
+    height: 20vh;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    margin-bottom: 0.4em;
+}
+
+.pelicula{
+    border-radius: 2%;
+}
+
+.div-peliculas h1{
+    grid-area: h1;
+    font-weight: bolder;
+}
+
+.pelicula:hover, .serie:hover{
+    background-color: rgb(50, 50, 50); 
+    color: rgb(200, 200, 200); 
+    border-color: rgb(200, 200, 200);
+    transform: translateY(-2px) scale(1.05); 
+}
+

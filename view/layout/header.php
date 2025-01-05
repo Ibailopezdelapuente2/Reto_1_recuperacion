@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/estilos/layout.css">
     <link rel="stylesheet" href="assets/estilos/pelicula.css">
+    <link rel="stylesheet" href="assets/estilos/serie.css">
 </head>
 <body>
     <div class="div-nav">
@@ -28,7 +29,7 @@
                 <a href="index.php?controller=pelicula&action=create">Añadir pelicula</a>
             </div>
             <div class="div-añadir-serie">
-                <a href="#">Añadir serie</a>
+                <a href="index.php?controller=serie&action=create">Añadir serie</a>
             </div>
             <div class="div-menu">
                 <img class="img-avatar" src="assets/Images/hombre.png" alt="">

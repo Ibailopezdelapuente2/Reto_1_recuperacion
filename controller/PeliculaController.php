@@ -1,6 +1,7 @@
 <?php 
 
 require_once "model/Pelicula.php";
+require_once "model/Serie.php";
 
 class PeliculaController{
 

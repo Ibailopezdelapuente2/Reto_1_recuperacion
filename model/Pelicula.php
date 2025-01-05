@@ -26,7 +26,7 @@ class Pelicula{
         }
     }
     public function getPeliculas(){
-        $sql = "SELECT * FROM " . $this->table;
+        $sql = "SELECT * FROM " . $this->table . " LIMIT 12";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
