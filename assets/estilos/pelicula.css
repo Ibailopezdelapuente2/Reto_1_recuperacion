@@ -126,3 +126,45 @@
     transform: translateY(-2px) scale(1.05); 
 }
 
+.div-detalle-peliculas-principal{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-detalle-peliculas{
+    min-width: 30%;
+    min-height: 40vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4em;
+    margin: 5em 0;
+}
+
+.div-detalle-peliculas img{
+    height: 45vh;
+    width: auto;
+}
+
+.div-detalle-descarga-pelicula img{
+    height: 5em;
+    width: auto;
+}
+
+.div-detalle-descripciones-pelicula{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5em 3em 0 3em;
+}
+
+.div-detalle-datos-pelicula{
+    word-wrap: break-word; /* Para navegadores más antiguos */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 30em;
+}

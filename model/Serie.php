@@ -54,6 +54,24 @@ class Serie{
             }
         }
     }
+    public function getTemporadasBySerieId($serie_id){
+        $sql = "SELECT * FROM temporadas WHERE id_serie=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute($serie_id);
+        return $stmt->fetchAll();
+    }
+    public function getCapitulosByTemporadaId($temporada_id){
+        $sql = "SELECT * FROM capitulos WHERE id_temporada=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute($temporada_id);
+        return $stmt->fetchAll();
+    }
+    public function getSerieById($serie_id){
+        $sql = "SELECT * FROM ". $this->table . " WHERE id=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute($serie_id);
+        return $stmt->fetchAll();
+    }
 }
 
 ?>

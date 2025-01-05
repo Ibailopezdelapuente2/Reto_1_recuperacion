@@ -26,6 +26,14 @@ class SerieController{
         $this->model->insertarCapitulos($_POST, $serie_id, $_FILES);
     }
 
+    public function detalle(){
+        $this->view = "detalle";
+        $this->page_title ="detalle serie";
+        $serie = $this->model->getSerieById($_GET["serie_id"]);
+        $temporadas = $this->model->getTemporadasBySerieId($_GET["serie_id"]);
+        $capitulos = $this->model->getCapitulosByTemporadaId($_GET["temporada_id"]);
+        return ["serie" =>$serie, "temporadas" => $temporadas, "capitulos" => $capitulos];
+    }
 }
 
 ?>

@@ -2,7 +2,7 @@
     <div class="div-peliculas">
         <h1>Peliculas:</h1>
         <?php foreach ($dataToView["data"]["peliculas"] as $peliculas) { ?>
-            <a href=""><div class="pelicula">
+            <a href="index.php?controller=pelicula&action=detalle&id=<?php echo $peliculas["id"] ?>"><div class="pelicula">
                 <div class="div-img-peliculas-inicial">
                     <img class="img-peliculas-inicial" src="<?php echo $peliculas["foto"] ?>" alt="">
                 </div>

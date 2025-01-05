@@ -33,6 +33,34 @@ class PeliculaController{
         $this->page_title = "creacion de peliculas";
         $this->model->guardarPelicula($_POST, $_FILES['contenido'], $_FILES['portada']);
     }
+    public function detalle(){
+        $this->view = "detalle";
+        $this->page_title = "detalle de pelicula";
+        return $this->model->getPeliculaById($_GET["id"]);
+                
+    }
+    public function download(){
+        $this->view = "detalle";
+        $this->page_title = "detalle de pelicula";
+        if (isset($_GET['file'])) {
+            $file = basename($_GET['file']); 
+            $filePath = 'assets/videos/' . $file;
+        
+            if (file_exists($filePath)) {
+                header('Content-Description: File Transfer');
+                header('Content-Type: application/octet-stream');
+                header('Content-Disposition: attachment; filename="' . $file . '"');
+                header('Expires: 0');
+                header('Cache-Control: must-revalidate');
+                header('Pragma: public');
+                header('Content-Length: ' . filesize($filePath));
+        
+                flush();
+                readfile($filePath);
+                exit;
+            }
+        }
+    }
 }
 
 ?>

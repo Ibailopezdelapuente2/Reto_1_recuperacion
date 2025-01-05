@@ -21,7 +21,7 @@ class Pelicula{
             if (move_uploaded_file($video['tmp_name'], $rutaDestino) && move_uploaded_file($_FILES['portada']['tmp_name'], $rutaImagen)){
                 $sql = "INSERT INTO ". $this->table ."(nombre, duracion, genero, descripcion, contenido, foto) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = $this->connection->prepare($sql);
-                $stmt->execute([$param['titulo'], $param['duracion'], $param['genero'], $param['descripcion'], $rutaDestino, $rutaImagen]);
+                $stmt->execute([$param['titulo'], $param['duracion'], $param['genero'], $param['descripcion'], $nombreArchivo, $rutaImagen]);
             }
         }
     }
@@ -30,6 +30,12 @@ class Pelicula{
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+    public function getPeliculaById($id){
+        $sql = "SELECT * FROM ". $this->table . " WHERE id=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$id]);
+        return $stmt->fetch();
     }
 }
 
