@@ -30,6 +30,20 @@ class UsuarioController{
             header("Location:index.php?controller=usuario&action=login");
         }
     }
+    public function cerrarSesion(){
+        $this->page_title = "cerrarSesion";
+        session_unset();
+        header("Location: index.php?controller=usuario&action=login");
+    }
+    public function create(){
+        $this->view = "create";
+        $this->page_title = "crear usuarios";
+        $this->model->createUsuarios($_POST);
+    }
+    public function createView(){
+        $this->view = "create";
+        $this->page_title = "crear usuarios";
+    }
 
 }
 

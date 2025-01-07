@@ -163,8 +163,37 @@
 }
 
 .div-detalle-datos-pelicula{
-    word-wrap: break-word; /* Para navegadores más antiguos */
+    word-wrap: break-word; 
     overflow-wrap: break-word;
     word-wrap: break-word;
     max-width: 30em;
+}
+
+.contenedor-arriba-list-all{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.div-buscar form{
+    display: flex;
+    align-items: center;
+}
+.div-buscar form input{
+    background-color: black;
+}
+
+.div-borrar{
+    border: red solid 0.0000001em;
+    padding: 0.6em 3em;
+}
+
+.div-borrar p{
+    color: red;    
+}
+
+.div-detalle-descarga-pelicula{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

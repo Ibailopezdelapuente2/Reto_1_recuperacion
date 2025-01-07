@@ -13,5 +13,6 @@
             <img class="img-rrss" src="assets/Images/facebook.png" alt="">
         </div>
     </footer>
+<script src="assets/JS/validaciones.js"></script>
 </body>
 </html>

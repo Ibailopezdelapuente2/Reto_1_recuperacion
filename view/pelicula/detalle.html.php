@@ -10,6 +10,7 @@
             </div>
             <div class="div-detalle-descarga-pelicula">
                 <a href="index.php?controller=pelicula&action=download&file=<?php echo $dataToView["data"]["contenido"] ?>"><img src="assets/Images/descargar.png" alt=""></a>
+                <?php if($_SESSION["rol"]==="admin") {?><a href="index.php?controller=pelicula&action=delete&id=<?php echo $dataToView["data"]["id"] ?>"><div class="div-borrar"><p>Borrar pelicula</p></div></a><?php } ?>
             </div>
         </div>
     </div>

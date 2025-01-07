@@ -28,6 +28,11 @@ class Usuario{
         
         return $i;
     }
+    public function createUsuarios($param){
+        $sql = "INSERT INTO " . $this->table . " (nombre, contrasenna, correo, rol) VALUES (?, ?, ?, ?)";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$param["nombre"], $param["contrasenna"], $param["correo"], $param["rol"]]);
+    }
 }
 
 ?>

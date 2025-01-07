@@ -14,38 +14,31 @@
             <a href="index.php?controller=pelicula&action=list"><img class="img-logo" src="assets/Images/logo_egibideflix.png" alt=""></a>
             <ul>
                 <li><a href="index.php?controller=pelicula&action=list">Inicio</a></li>
-                <li><a href="#">Series</a></li>
-                <li><a href="#">Peliculas</a></li>
-                <li><a href="#">Populares</a></li>
-                <li><a href="#">Mi lista</a></li>
-            </ul>
+                <li><a href="index.php?controller=serie&action=getAllSeries&page=1">Series</a></li>
+                <li><a href="index.php?controller=pelicula&action=listAll&page=1">Peliculas</a></li>
         </div>
         <div class="div-buscador-perfil">
-            <div class="div-buscar">
-                <label for="caja-buscar"><img class="img-lupa" src="assets/Images/lupa.png" alt=""></label>
-                <input class="caja-buscar" id="caja-buscar" type="text" placeholder="Buscar por categoria">
-            </div>
+        <?php if($_SESSION["rol"] === "admin"){ ?>
             <div class="div-añadir-pelicula">
                 <a href="index.php?controller=pelicula&action=create">Añadir pelicula</a>
             </div>
             <div class="div-añadir-serie">
                 <a href="index.php?controller=serie&action=create">Añadir serie</a>
             </div>
+            <?php } ?>
             <div class="div-menu">
                 <img class="img-avatar" src="assets/Images/hombre.png" alt="">
                 <div class="div-menu-desplegable">
+                    <?php if($_SESSION["rol"] === "admin"){ ?>
                     <div class="div-usuario">
                         <div class="div-cuenta">
                             <img class="img-usuario" src="assets/Images/usuario.png" alt="">
-                            <a href="#">Cuenta</a>
-                        </div>
-                        <div class="div-avatar">
-                            <img class="img-usuario" src="assets/Images/usuario.png" alt="">
-                            <a href="#">Editar avatar</a>
+                            <a href="index.php?controller=usuario&action=createView">Crear usuario</a>
                         </div>
                     </div>
+                    <?php } ?>
                     <div class="div-cerrar-sesion">
-                        <a href="#">Cerrar sesion</a>
+                        <a href="index.php?controller=usuario&action=cerrarSesion">Cerrar sesion</a>
                     </div>
                 </div>
             </div>

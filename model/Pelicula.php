@@ -26,7 +26,7 @@ class Pelicula{
         }
     }
     public function getPeliculas(){
-        $sql = "SELECT * FROM " . $this->table . " LIMIT 12";
+        $sql = "SELECT * FROM " . $this->table . " ORDER BY id DESC LIMIT 12";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
@@ -36,6 +36,31 @@ class Pelicula{
         $stmt = $this->connection->prepare($sql);
         $stmt->execute([$id]);
         return $stmt->fetch();
+    }
+    public function contarPelis(){
+        $sql = "SELECT COUNT(*) as total FROM " . $this->table;
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        return $statement->fetch()['total'];
+    }
+    public function getPelisPaginadas($limit, $offset){
+        $sql = "SELECT * FROM " . $this->table . " ORDER BY RAND() DESC LIMIT ? OFFSET ?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->bindValue(1, $limit, PDO::PARAM_INT);
+        $stmt->bindValue(2, $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+    public function getPeliculasByGenero($genero){
+        $sql = "SELECT * FROM " . $this->table . " WHERE genero=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$genero]);
+        return $stmt->fetchAll();
+    }
+    public function deletePeliById($id){
+        $sql = "DELETE FROM " . $this->table . " WHERE id=?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$id]);
     }
 }
 

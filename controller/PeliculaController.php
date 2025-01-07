@@ -61,6 +61,39 @@ class PeliculaController{
             }
         }
     }
+    public function listAll(){
+        $this->view = "listAll";
+        $this->page_title = "listar todas las peliculas";
+        $paginaActual = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
+        $limite = 21;
+        $offset = ($paginaActual-1)*$limite;
+        $totalPelis = $this->model->contarPelis();
+        $totalPaginas = ceil($totalPelis / $limite);
+        $pelis = $this->model->getPelisPaginadas($limite, $offset);
+        $dataToView = [
+            "data" => $pelis ?? [],
+            "paginaActual" => $paginaActual,
+            "totalPaginas" => $totalPaginas
+        ];
+
+        $this->renderView("pelicula/listAll.html", $dataToView);
+    }
+    public function renderView($view, $dataToView = []){
+        extract($dataToView);
+        require_once "view/layout/header.php";
+        require_once 'view/' . $view . '.php';
+    }
+    public function listCategoria(){
+        $this->view = "listCategoria";
+        $this->page_title = "listar por categoria peliculas";
+        return $this->model->getPeliculasByGenero($_POST["categoria"]);
+    }
+    public function delete(){
+        $this->view = "detalle";
+        $this->page_title = "borrar pelicula";
+        $this->model->deletePeliById($_GET["id"]);
+        header("Location: index.php?controller=pelicula&action=list");
+    }
 }
 
 ?>

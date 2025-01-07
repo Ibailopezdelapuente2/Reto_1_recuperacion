@@ -11,13 +11,15 @@
                     <p>Duracion: <?php echo $peliculas["duracion"] ?>min</p>
                     <p>Genero: <?php echo $peliculas["genero"] ?></p>
                 </div>
+                
+                
             </div></a>
         <?php } ?>
     </div>
     <div class="div-series">
         <h1>Series:</h1>
         <?php foreach ($dataToView["data"]["series"] as $series) { ?>
-            <a href=""><div class="serie">
+            <a href="index.php?controller=serie&action=puenteDetalle&serie_id=<?= $series["id"] ?>"><div class="serie">
                 <div class="div-img-series-inicial">
                         <img class="img-series-inicial" src="<?php echo $series["foto"] ?>" alt="">
                     </div>

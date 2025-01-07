@@ -46,3 +46,110 @@
     ". . . . . ."
     ". . . . . .";
 }
+
+.div-detalle-descripciones-serie{
+    
+    width: 100%;
+    padding: 1.5em 3em 0 3em;
+}
+
+.div-detalle-temporada{
+    border-top: rgb(166, 166, 166) solid 0.000000001em;
+    width: 100%;
+    grid-area: 3;
+    margin-top: 0.6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-seleccionar-temporada-detalle label, .div-seleccionar-temporada-detalle select{
+    font-size: 1.2em;
+}
+
+.div-seleccionar-temporada-detalle select{
+    background-color: rgb(32, 32, 32);
+    border: rgb(166, 166, 166) solid 0.000000001em;
+}
+
+.div-detalle-datos-serie{
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 30em;
+    grid-area: 2;
+}
+
+.div-detalle-series{
+    min-width: 30%;
+    min-height: 40vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4em;
+    margin: 5em 0;
+}
+
+.div-detalle-serie-separar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.div-seleccionar-temporada-detalle form{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-seleccionar-temporada-detalle form button{
+    background-color: rgb(32, 32, 32);
+    border: rgb(166, 166, 166) solid 0.000000001em;
+    font-size: 1.2em;
+    padding: 0.3em 0.5em;
+    margin-top: 0.3em;
+}
+
+.div-detalle-capitulo{
+    border-top: rgb(166, 166, 166) solid 0.000000001em;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+.div-detalle-capitulo img{
+    height: 2em;
+    width: auto;
+    float: right;
+}
+
+.contenedor-list-all{
+    min-height: 80vh;
+    margin-bottom: 3em;
+    padding: 2em 10em;
+}
+
+.div-series-all{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.boton-paginacion-serie{
+    border: rgb(166, 166, 166) solid 0.000000001em;
+    padding: 0.3em;
+}
+
+.div-botones-paginacion-series{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.6em;
+    gap: 0.3em;
+}
+
+.paginar{
+    max-height: 2.5em;
+    width: auto;
+}
+
